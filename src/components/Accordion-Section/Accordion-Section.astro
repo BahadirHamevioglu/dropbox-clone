@@ -1,0 +1,60 @@
+---
+import { Sprite } from "astro-icon";
+import TitleSection from "../Text-Section/Title-Section.astro";
+import Accordion from "./components/Accordion.astro";
+---
+
+<section>
+  <Sprite.Provider>
+    <TitleSection
+      text="What can Dropbox help you do?"
+      subtext="Dropbox brings everything traditional files cloud content, and web shortcut stogether in one place."
+    />
+
+    <div class="accordion-section">
+      <div class="content">
+        <div class="accordions">
+          <Accordion
+            title="Get 2 GB of cloud storage for free with Dropbox Basic"
+            content="Save and access your files from any device, and share them with anyone. Discover what Dropbox can do for you—get a free account, no strings attached!"
+          />
+          <Accordion
+            title="Dropbox Plus has room for all your content with space to spare"
+            content="Safeguard your photos, personal docs, work files and much more. Save everything with 2,000 GB of space – and get some handy tools to help you stay organised."
+          />
+          <Accordion
+            title="Dropbox Family is a place for everyone with space for everything"
+            content="Share 2,000 GB of storage between 6 people. Each family plan member gets their own private Dropbox account for less than the price of two Plus plans."
+          />
+          <Accordion
+            title="Make life easier for you and your clients with Dropbox Professional"
+            content="Get our full suite of premium productivity and sharing tools – plus 3,000 GB of space. Dropbox Professional makes it easier for you to work with colleagues and clients."
+          />
+          <Accordion
+            title="Centralise, secure and easily access your work with Dropbox Standard"
+            content="Safeguard sensitive and confidential info. Automate time-consuming processes with powerful admin and collaboration tools. And easily recover your work if something ever goes wrong. Minimum 3 users per plan."
+          />
+          <Accordion
+            title="DocSend lets you track, analyse and optimise your content"
+            content="Safely share business-critical documents and get real-time performance insights. DocSend helps you manage and optimise your company’s most important content"
+          />
+        </div>
+      </div>
+    </div>
+  </Sprite.Provider>
+</section>
+
+<style lang="scss">
+  .accordion-section {
+    height: 48rem;
+    .content {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      .accordions {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+      }
+    }
+  }
+</style>

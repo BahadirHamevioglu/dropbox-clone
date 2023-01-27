@@ -1,0 +1,40 @@
+---
+export interface Props {
+  text: string;
+  subtext?: string;
+}
+
+const { text, subtext } = Astro.props;
+---
+
+<section>
+  <div class="content container">
+    <div class="text">{text}</div>
+    <div class="subtext">
+      {subtext}
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  section {
+    padding: 72px 0;
+    .content {
+      max-width: 828px;
+      margin: 0 auto;
+      text-align: center;
+      .text {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 41px;
+        margin-bottom: 16px;
+      }
+      .subtext {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 0;
+      }
+    }
+  }
+</style>

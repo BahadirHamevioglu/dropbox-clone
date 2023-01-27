@@ -1,0 +1,98 @@
+---
+import { Sprite } from "astro-icon";
+---
+
+<div class="first__content">
+  <Sprite.Provider>
+    <div class="maintext">
+      Join over 700 million registered users who trust Dropbox
+    </div>
+    <div class="subtext">
+      Easy to use, reliable, private, and secure. It’s no wonder Dropbox is the
+      choice for storing and sharing your most important files.
+    </div>
+    <button>
+      <div>Find your plan</div>
+      <div>
+        <Sprite name="arrow-right" />
+      </div>
+    </button>
+    <div>
+      <div class="image-container">
+        <img src="./herosection-image.png" alt="" />
+      </div>
+    </div>
+  </Sprite.Provider>
+</div>
+
+<style lang="scss">
+  .first__content {
+    max-width: 760px;
+    margin-bottom: 1rem;
+    margin-top: 48px;
+    padding: 0 1rem;
+    text-align: center;
+
+    .maintext {
+      color: #f7f5f2;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 48px;
+      margin-bottom: 1rem;
+    }
+    .subtext {
+      color: #f7f5f2;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      background-color: #3984ff;
+      color: #1e1919;
+      padding: 24px;
+      gap: 33.38px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      margin-bottom: 72px;
+
+      div {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      &:hover {
+        background-color: #2778f9;
+      }
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      margin: 0 auto;
+      max-width: 1200px;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  [astro-icon="arrow-right"] {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1e1919;
+  }
+</style>

@@ -1,0 +1,48 @@
+---
+import Card from "./components/Card.astro";
+---
+
+<div class="second_content">
+  <div class="title">See what sets Dropbox apart</div>
+  <div class="cards">
+    <Card
+      icon="smile"
+      title="Your files, not ours"
+      text="With Dropbox, your files belong to you, not us, so you can be sure we’re not reselling your data."
+    />
+    <Card
+      icon="cloud"
+      title="All your files in one place"
+      text="Store computer backups, photo libraries, thousands of documents—all your files, in the same place."
+    />
+    <Card
+      icon="twinkle"
+      title="One-of-a-kind functionality"
+      text="Store files as large as 2 TB each, sync at light speed, and allow anyone to preview nearly 200 file types."
+    />
+    <Card
+      icon="shield"
+      title="Ease of use and security"
+      text="2/3 of surveyed users say Dropbox keeps their files more secure and we’re a leader in ease of use."
+    />
+  </div>
+</div>
+
+<style lang="scss">
+  .second_content {
+    margin-top: 72px;
+    width: 100%;
+    .title {
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 38px;
+      color: #f7f5f2;
+      margin-bottom: 24px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 24px;
+    }
+  }
+</style>

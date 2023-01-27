@@ -1,0 +1,57 @@
+---
+import { Sprite } from "astro-icon";
+
+export interface Props {
+  icon?: string;
+  title?: string;
+  text?: string;
+}
+
+const { icon, title, text } = Astro.props;
+---
+
+<div class="card">
+  <div class="card_content">
+    <div class="card_icon">
+      <Sprite.Provider>
+        <Sprite name={icon} />
+      </Sprite.Provider>
+    </div>
+    <div class="card_title">{title}</div>
+    <div class="card_text">
+      {text}
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .card {
+    display: flex;
+    .card_content {
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+      text-align: left;
+      .card_title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 20px;
+        color: #f7f5f2;
+        margin-bottom: 16px;
+      }
+      .card_text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #f7f5f2;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  [astro-icon] {
+    width: 49px;
+    height: 49px;
+    margin-bottom: 16px;
+  }
+</style>

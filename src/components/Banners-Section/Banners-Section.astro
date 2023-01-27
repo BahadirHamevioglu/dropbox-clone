@@ -1,0 +1,39 @@
+---
+import { Sprite } from "astro-icon";
+import Banner from "./components/Banner.astro";
+---
+
+<section>
+  <Sprite.Provider>
+    <div class="banners">
+      <Banner
+        icon="banner-icon-1"
+        title="Dropbox Sign"
+        mainText="Add eSignature to your workflows"
+        subText="Dropbox Sign is the simple and secure way to send and request legally binding signatures online."
+        buttonUrl="/"
+        image="/banner-image-1.png"
+      />
+      <Banner
+        icon="banner-icon-2"
+        title="DocSend, a Dropbox company"
+        mainText="Send a link and share your documents"
+        subText="Use DocSend to share, manage, and optimize business-critical documents by simply sending a link.."
+        buttonUrl="/"
+        image="/banner-image-2.png"
+      />
+    </div>
+  </Sprite.Provider>
+</section>
+
+<style lang="scss">
+  section {
+    margin-top: 0.5rem;
+    // #14c8eb
+  }
+  .banners {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8px;
+  }
+</style>
