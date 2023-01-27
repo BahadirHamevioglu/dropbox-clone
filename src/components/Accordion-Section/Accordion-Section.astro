@@ -45,15 +45,18 @@ import Accordion from "./components/Accordion.astro";
 </section>
 
 <style lang="scss">
-  .accordion-section {
-    height: 48rem;
-    .content {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      .accordions {
-        display: flex;
-        flex-direction: column;
-        background-color: #fff;
+  section {
+    margin-bottom: 1rem;
+    .accordion-section {
+      height: 48rem;
+      .content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        .accordions {
+          display: flex;
+          flex-direction: column;
+          background-color: #fff;
+        }
       }
     }
   }
