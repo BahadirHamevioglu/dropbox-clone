@@ -1,0 +1,71 @@
+---
+import TitleSection from "../Text-Section/Title-Section.astro";
+import Tool from "./components/Tool.astro";
+---
+
+<section>
+  <TitleSection
+    text="Get more out of Dropbox by connecting with the tools you love"
+    subtext="Learn more about partner integrations"
+  />
+
+  <div class="tools-section">
+    <div class="content container">
+      <Tool
+        image="/zoom.png"
+        title="Zoom"
+        subText="Enhance remote collaboration with Zoom instant meetings and video recordings."
+      />
+      <Tool
+        image="/slack.png"
+        title="Slack"
+        subText="Bring Slack conversations and Dropbox content together to keep teams in sync."
+      />
+      <Tool
+        image="/adobe-creative-cloud.png"
+        title="Adobe Creative Cloud"
+        subText="Easily and securely send files to clients and vendors from within Adobe Photoshop."
+      />
+      <Tool
+        image="/mc-office.png"
+        title="Microsoft Office"
+        subText="Easily access, edit, and share Office docs online in Dropbox."
+      />
+      <Tool
+        image="/google-workspace.png"
+        title="Google Workspace"
+        subText="Create, edit, and share Google Docs, Sheets, and Slides in Dropbox."
+      />
+      <Tool
+        image="/trello.png"
+        title="Trello"
+        subText="Collaborate on team projects in Trello with Dropbox content."
+      />
+      <Tool
+        image="/canvas.png"
+        title="Canvas"
+        subText="Upload course files or assignments straight from Dropbox to Canvas."
+      />
+      <Tool
+        image="/asana.png"
+        title="Asana"
+        subText="Track all of your team’s work with Asana while keeping Dropbox content alongside."
+      />
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .tools-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 1rem;
+      row-gap: 2rem;
+    }
+  }
+</style>

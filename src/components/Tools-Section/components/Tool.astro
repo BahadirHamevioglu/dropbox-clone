@@ -1,0 +1,49 @@
+---
+export interface Props {
+  image: string;
+  title: string;
+  subText: string;
+}
+
+const { image, title, subText } = Astro.props;
+---
+
+<div class="tool">
+  <div class="tool-content">
+    <div class="image">
+      <img src={image} alt="" />
+    </div>
+    <div class="text">{title}</div>
+    <div class="subtext">
+      {subText}
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .tool {
+    padding: 1rem;
+    transition: background-color 0.2s ease-in-out;
+    &:hover {
+      background-color: #e4e3e3;
+    }
+    .tool-content {
+      display: flex;
+      flex-direction: column;
+      .image {
+        margin-bottom: 23px;
+      }
+      .text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 23px;
+      }
+      .subtext {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+</style>
