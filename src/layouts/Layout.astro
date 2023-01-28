@@ -1,6 +1,7 @@
 ---
 import "@fontsource/space-grotesk";
 import Header from "../components/Header/Header.astro";
+import Footer from "../components/Footer/Footer.astro";
 import "../styles/global.scss";
 
 export interface Props {
@@ -22,5 +23,6 @@ const { title } = Astro.props;
   <body>
     <Header />
     <slot />
+    <Footer />
   </body>
 </html>

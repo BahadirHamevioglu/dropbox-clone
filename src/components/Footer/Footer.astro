@@ -1,0 +1,256 @@
+---
+const footerDropBoxLinks = [
+  {
+    title: "Desktop app",
+    link: "#",
+  },
+  {
+    title: "Mobile app",
+    link: "#",
+  },
+  {
+    title: "Integrations",
+    link: "#",
+  },
+  {
+    title: "Features",
+    link: "#",
+  },
+  {
+    title: "Solutions",
+    link: "#",
+  },
+  {
+    title: "Do more than store",
+    link: "#",
+  },
+  {
+    title: "Security",
+    link: "#",
+  },
+  {
+    title: "Advance access",
+    link: "#",
+  },
+];
+
+const footerProductLinks = [
+  {
+    title: "Plus",
+    link: "#",
+  },
+  {
+    title: "Professional",
+    link: "#",
+  },
+  {
+    title: "Business",
+    link: "#",
+  },
+  {
+    title: "Enterprise",
+    link: "#",
+  },
+  {
+    title: "Dropbox Sign",
+    link: "#",
+  },
+  {
+    title: "DocSend",
+    link: "#",
+  },
+  {
+    title: "Plans",
+    link: "#",
+  },
+  {
+    title: "Product updates",
+    link: "#",
+  },
+];
+
+const footerSupportLinks = [
+  {
+    title: "Help center",
+    link: "#",
+  },
+  {
+    title: "Contact us",
+    link: "#",
+  },
+  {
+    title: "Privacy & terms",
+    link: "#",
+  },
+  {
+    title: "Cookie policy",
+    link: "#",
+  },
+  {
+    title: "Cookies & CCPA preferences",
+    link: "#",
+  },
+  {
+    title: "Sitemap",
+    link: "#",
+  },
+  {
+    title: "Learning resources",
+    link: "#",
+  },
+];
+
+const footerCommunityLinks = [
+  {
+    title: "Blog",
+    link: "#",
+  },
+  {
+    title: "Developers",
+    link: "#",
+  },
+  {
+    title: "Community forums",
+    link: "#",
+  },
+  {
+    title: "Referrals",
+    link: "#",
+  },
+];
+
+const footerCompanyLinks = [
+  {
+    title: "About us",
+    link: "#",
+  },
+  {
+    title: "Jobs",
+    link: "#",
+  },
+  {
+    title: "Investor relations",
+    link: "#",
+  },
+  {
+    title: "ESG",
+    link: "#",
+  },
+  {
+    title: "Partners",
+    link: "#",
+  },
+];
+---
+
+<footer>
+  <div class="content container">
+    <div class="list">
+      <ul>
+        <div class="title">Dropbox</div>
+        {
+          footerDropBoxLinks.map((item) => (
+            <>
+              <li>
+                <a href={item.link}> {item.title} </a>
+              </li>
+            </>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="list">
+      <ul>
+        <div class="title">Products</div>
+        {
+          footerProductLinks.map((item) => (
+            <>
+              <li>
+                <a href={item.link}> {item.title} </a>
+              </li>
+            </>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="list">
+      <ul>
+        <div class="title">Support</div>
+        {
+          footerSupportLinks.map((item) => (
+            <>
+              <li>
+                <a href={item.link}> {item.title} </a>
+              </li>
+            </>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="list">
+      <ul>
+        <div class="title">Community</div>
+        {
+          footerCommunityLinks.map((item) => (
+            <>
+              <li>
+                <a href={item.link}> {item.title} </a>
+              </li>
+            </>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="list">
+      <ul>
+        <div class="title">Company</div>
+        {
+          footerCompanyLinks.map((item) => (
+            <>
+              <li>
+                <a href={item.link}> {item.title} </a>
+              </li>
+            </>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<style lang="scss">
+  footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 72px 0;
+    .content {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      .list {
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          li {
+            margin-bottom: 16px;
+            a {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 17px;
+              color: #f7f5f2;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+          .title {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 25px;
+            margin-bottom: 27px;
+          }
+        }
+      }
+    }
+  }
+</style>
