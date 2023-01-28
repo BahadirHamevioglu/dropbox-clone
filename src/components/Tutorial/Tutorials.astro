@@ -1,0 +1,40 @@
+---
+import { Sprite } from "astro-icon";
+import SectionTitle from "../Section-Title/Title.astro";
+import Tutorial from "./components/Tutorial.astro";
+
+import data from "../../data/tutorial.json";
+---
+
+<section>
+  <SectionTitle text="How will you use Dropbox?" />
+  <Sprite.Provider>
+    <div class="tutorial-section">
+      <div class="content container">
+        {
+          data.map((item) => {
+            return (
+              <Tutorial
+                icon={item.icon}
+                image={item.image}
+                title={item.title}
+                subtitle={item.subtitle}
+                buttonText={item.buttonText}
+              />
+            );
+          })
+        }
+      </div>
+    </div>
+  </Sprite.Provider>
+</section>
+
+<style lang="scss">
+  .tutorial-section {
+    .content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 0.5rem;
+    }
+  }
+</style>

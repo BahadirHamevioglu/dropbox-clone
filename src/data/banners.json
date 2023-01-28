@@ -1,0 +1,18 @@
+[
+  {
+    "icon": "banner-icon-1",
+    "title": "Dropbox Sign",
+    "mainText": "Add eSignature to your workflows",
+    "subText": "Dropbox Sign is the simple and secure way to send and request legally binding signatures online.",
+    "buttonUrl": "/",
+    "image": "/Banner-Images/banner-image-1.png"
+  },
+  {
+    "icon": "banner-icon-2",
+    "title": "DocSend, a Dropbox company",
+    "mainText": "Send a link or share your documents",
+    "subText": "Use DocSend to share, manage, and optimize business-critical documents by simply sending a link..",
+    "buttonUrl": "/",
+    "image": "/Banner-Images/banner-image-2.png"
+  }
+]

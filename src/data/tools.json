@@ -1,0 +1,42 @@
+[
+  {
+    "image": "/Tools-Images/zoom.png",
+    "title": "Zoom",
+    "subText": "Enhance remote collaboration with Zoom instant meetings and video recordings."
+  },
+  {
+    "image": "/Tools-Images/slack.png",
+    "title": "Slack",
+    "subText": "Bring Slack conversations and Dropbox content together to keep teams in sync."
+  },
+  {
+    "image": "/Tools-Images/adobe-creative-cloud.png",
+    "title": "Adobe Creative Cloud",
+    "subText": "Easily and securely send files to clients and vendors from within Adobe Photoshop."
+  },
+  {
+    "image": "/Tools-Images/mc-office.png",
+    "title": "Microsoft Office",
+    "subText": "Easily access, edit, and share Office docs online in Dropbox."
+  },
+  {
+    "image": "/Tools-Images/google-workspace.png",
+    "title": "Google Workspace",
+    "subText": "Create, edit, and share Google Docs, Sheets, and Slides in Dropbox."
+  },
+  {
+    "image": "/Tools-Images/trello.png",
+    "title": "Trello",
+    "subText": "Collaborate on team projects in Trello with Dropbox content."
+  },
+  {
+    "image": "/Tools-Images/canvas.png",
+    "title": "Canvas",
+    "subText": "Upload course files or assignments straight from Dropbox to Canvas."
+  },
+  {
+    "image": "/Tools-Images/asana.png",
+    "title": "Asana",
+    "subText": "Track all of your team’s work with Asana while keeping Dropbox content alongside."
+  }
+]

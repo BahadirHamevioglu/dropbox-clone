@@ -1,0 +1,47 @@
+---
+import SectionTitle from "../Section-Title/Title.astro";
+import Tool from "./components/Tool.astro";
+
+import data from "../../data/tools.json";
+---
+
+<section>
+  <SectionTitle
+    text="Get more out of Dropbox by connecting with the tools you love"
+    subtext="Learn more about partner integrations"
+  />
+
+  <div class="tools-section">
+    <div class="content container">
+      {
+        data.map((tool) => {
+          return (
+            <Tool
+              image={tool.image}
+              title={tool.title}
+              subText={tool.subText}
+            />
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  section {
+    margin-bottom: 1rem;
+    .tools-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 1rem;
+        row-gap: 2rem;
+      }
+    }
+  }
+</style>

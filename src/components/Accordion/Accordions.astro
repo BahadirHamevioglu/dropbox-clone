@@ -1,0 +1,44 @@
+---
+import { Sprite } from "astro-icon";
+import SectionTitle from "../Section-Title/Title.astro";
+import Accordion from "./components/Accordion.astro";
+import data from "../../data/accordions.json";
+---
+
+<section>
+  <Sprite.Provider>
+    <SectionTitle
+      text="What can Dropbox help you do?"
+      subtext="Dropbox brings everything traditional files cloud content, and web shortcut stogether in one place."
+    />
+
+    <div class="accordion-section">
+      <div class="content">
+        <div class="accordions">
+          {
+            data.map((item) => {
+              return <Accordion title={item.title} content={item.content} />;
+            })
+          }
+        </div>
+      </div>
+    </div>
+  </Sprite.Provider>
+</section>
+
+<style lang="scss">
+  section {
+    margin-bottom: 1rem;
+    .accordion-section {
+      .content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        .accordions {
+          display: flex;
+          flex-direction: column;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+</style>
