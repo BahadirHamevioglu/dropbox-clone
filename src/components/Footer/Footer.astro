@@ -1,4 +1,5 @@
 ---
+import Topic from "./components/Topic.astro";
 const footerDropBoxLinks = [
   {
     title: "Desktop app",
@@ -145,76 +146,11 @@ const footerCompanyLinks = [
 
 <footer>
   <div class="content container">
-    <div class="list">
-      <ul>
-        <div class="title">Dropbox</div>
-        {
-          footerDropBoxLinks.map((item) => (
-            <>
-              <li>
-                <a href={item.link}> {item.title} </a>
-              </li>
-            </>
-          ))
-        }
-      </ul>
-    </div>
-    <div class="list">
-      <ul>
-        <div class="title">Products</div>
-        {
-          footerProductLinks.map((item) => (
-            <>
-              <li>
-                <a href={item.link}> {item.title} </a>
-              </li>
-            </>
-          ))
-        }
-      </ul>
-    </div>
-    <div class="list">
-      <ul>
-        <div class="title">Support</div>
-        {
-          footerSupportLinks.map((item) => (
-            <>
-              <li>
-                <a href={item.link}> {item.title} </a>
-              </li>
-            </>
-          ))
-        }
-      </ul>
-    </div>
-    <div class="list">
-      <ul>
-        <div class="title">Community</div>
-        {
-          footerCommunityLinks.map((item) => (
-            <>
-              <li>
-                <a href={item.link}> {item.title} </a>
-              </li>
-            </>
-          ))
-        }
-      </ul>
-    </div>
-    <div class="list">
-      <ul>
-        <div class="title">Company</div>
-        {
-          footerCompanyLinks.map((item) => (
-            <>
-              <li>
-                <a href={item.link}> {item.title} </a>
-              </li>
-            </>
-          ))
-        }
-      </ul>
-    </div>
+    <Topic title="DropBox" arrayName={footerDropBoxLinks} />
+    <Topic title="Product" arrayName={footerProductLinks} />
+    <Topic title="Support" arrayName={footerSupportLinks} />
+    <Topic title="Community" arrayName={footerCommunityLinks} />
+    <Topic title="Company" arrayName={footerCompanyLinks} />
   </div>
 </footer>
 
@@ -226,31 +162,6 @@ const footerCompanyLinks = [
     .content {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      .list {
-        ul {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-          li {
-            margin-bottom: 16px;
-            a {
-              font-weight: 400;
-              font-size: 14px;
-              line-height: 17px;
-              color: #f7f5f2;
-              &:hover {
-                text-decoration: underline;
-              }
-            }
-          }
-          .title {
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 25px;
-            margin-bottom: 27px;
-          }
-        }
-      }
     }
   }
 </style>
