@@ -6,11 +6,12 @@ export interface Props {
   title: string;
   mainText: string;
   subText: string;
+  alt?: string;
   buttonUrl: string;
   bannerColor: string;
 }
 
-const { icon, title, mainText, subText, buttonUrl, image } = Astro.props;
+const { icon, title, mainText, subText, buttonUrl, image, alt } = Astro.props;
 const bannerColor1 = "#14C8EB";
 const bannerColor2 = "rgb(238 223 241)";
 ---
@@ -32,7 +33,7 @@ const bannerColor2 = "rgb(238 223 241)";
       <a href={buttonUrl}>Try for free</a>
     </div>
     <div class="image-container">
-      <img src={image} />
+      <img src={image} alt={alt} />
     </div>
   </div>
 </div>
